@@ -23,19 +23,19 @@ body {
 
 main {
     width: 100%;
-    max-width: 560px;
+    max-width: 580px;
     text-align: center;
 }
 
 .brand {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
-    margin-bottom: 12px;
+    gap: 14px;
+    margin-bottom: 14px;
 }
 
 .brand .leaf {
-    width: 52px;
+    width: 68px;
     height: auto;
     display: block;
     flex-shrink: 0;
@@ -53,7 +53,7 @@ main {
     font-size: 15px;
     color: #4a5a5a;
     margin: 0 auto 48px;
-    max-width: 440px;
+    max-width: 460px;
     line-height: 1.45;
 }
 
@@ -63,6 +63,9 @@ main {
     line-height: 1.32;
     margin: 0 0 28px;
     color: #1a1a1a;
+    min-height: 2.6em;
+    transition: opacity 0.35s ease;
+    opacity: 1;
 }
 
 .credibility {
@@ -94,12 +97,12 @@ main {
 }
 
 .form input:focus {
-    border-color: #5a8c3a;
+    border-color: #2266c8;
 }
 
 .form input:focus-visible {
-    border-color: #5a8c3a;
-    box-shadow: 0 0 0 3px rgba(90, 140, 58, 0.22);
+    border-color: #2266c8;
+    box-shadow: 0 0 0 3px rgba(34, 102, 200, 0.22);
 }
 
 .form button {
@@ -109,7 +112,7 @@ main {
     font-weight: 600;
     padding: 14px 32px;
     min-height: 44px;
-    background: #5a8c3a;
+    background: #1a6fd0;
     color: #fff;
     border: none;
     border-radius: 999px;
@@ -118,11 +121,11 @@ main {
     touch-action: manipulation;
 }
 
-.form button:hover { background: #4a7a30; }
+.form button:hover { background: #1559b3; }
 .form button:active { transform: translateY(1px); }
 .form button:focus-visible {
     outline: none;
-    box-shadow: 0 0 0 3px rgba(90, 140, 58, 0.35);
+    box-shadow: 0 0 0 3px rgba(34, 102, 200, 0.35);
 }
 .form button:disabled { opacity: 0.55; cursor: default; }
 
@@ -135,48 +138,18 @@ main {
 
 .thanks {
     font-size: 18px;
-    color: #5a8c3a;
+    color: #1a6fd0;
     margin: 0;
     padding: 12px 0;
 }
 
-.chips {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-    margin-top: 18px;
-}
-
-.chip {
-    font: inherit;
-    font-size: 13px;
-    color: #3d6628;
-    background: #f3f8eb;
-    border: 1px solid #d9e6c4;
-    padding: 12px 16px;
-    min-height: 44px;
-    border-radius: 999px;
-    cursor: pointer;
-    transition: background 0.15s, border-color 0.15s, box-shadow 0.15s;
-    touch-action: manipulation;
-}
-
-.chip:hover { background: #e8f1d6; border-color: #c4d6a4; }
-.chip:active { background: #dde9c2; }
-.chip:focus-visible {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(90, 140, 58, 0.3);
-    border-color: #5a8c3a;
-}
-
 @media (max-width: 480px) {
-    .brand { margin-bottom: 10px; gap: 10px; }
+    .brand { margin-bottom: 12px; gap: 10px; }
     .brand .wordmark { font-size: 26px; }
-    .brand .leaf { width: 44px; }
+    .brand .leaf { width: 56px; }
     .tagline { font-size: 14px; margin-bottom: 36px; }
     .credibility { font-size: 12px; margin-top: 28px; }
-    .chip { font-size: 12px; padding: 11px 14px; }
+    .question { min-height: 3em; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -185,4 +158,5 @@ main {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
     }
+    .question { opacity: 1 !important; }
 }
