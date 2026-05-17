@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#ffffff">
+    <title>Arugula Motors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="brand">
+            <svg class="leaf" viewBox="0 0 64 90" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M32 88 C32 80 28 74 24 70 C14 68 8 60 12 52 C6 46 8 36 16 32 C12 26 16 18 24 18 C24 10 32 6 32 6 C32 6 40 10 40 18 C48 18 52 26 48 32 C56 36 58 46 52 52 C56 60 50 68 40 70 C36 74 32 80 32 88 Z" fill="#5a8c3a"/>
+                <path d="M32 86 L32 22" stroke="#3d6624" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+            <span class="wordmark">arugula motors</span>
+        </div>
+
+        <h1 class="question">What's messy in your business<br>that you'd like to clean up?</h1>
+
+        <form id="messForm" class="form" novalidate>
+            <input
+                id="messField"
+                name="mess"
+                type="text"
+                autocomplete="off"
+                autofocus
+                required
+                aria-label="What's messy in your business that you'd like to clean up?"
+            >
+            <button type="submit">Send</button>
+            <p class="status" id="status" role="status" aria-live="polite"></p>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
