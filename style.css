@@ -113,8 +113,33 @@ main {
     padding: 12px 0;
 }
 
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 18px;
+}
+
+.chip {
+    font: inherit;
+    font-size: 13px;
+    color: #4a7a30;
+    background: #f3f8eb;
+    border: 1px solid #d9e6c4;
+    padding: 7px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+    touch-action: manipulation;
+}
+
+.chip:hover { background: #e8f1d6; border-color: #c4d6a4; }
+.chip:active { background: #dde9c2; }
+
 @media (max-width: 480px) {
     .brand { margin-bottom: 40px; }
     .brand .wordmark { font-size: 24px; }
     .brand .leaf { width: 30px; }
+    .chip { font-size: 12px; padding: 6px 12px; }
 }

@@ -5,6 +5,15 @@ const field = document.getElementById('messField');
 const status = document.getElementById('status');
 const button = form.querySelector('button');
 
+document.querySelectorAll('.chip').forEach((chip) => {
+    chip.addEventListener('click', () => {
+        const prefill = chip.dataset.prefill || '';
+        field.value = prefill;
+        field.focus();
+        field.setSelectionRange(field.value.length, field.value.length);
+    });
+});
+
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const message = field.value.trim();
