@@ -56,8 +56,8 @@ function makeRotator(el, items, intervalMs) {
     return { start, stop };
 }
 
-const questionRotator = makeRotator(questionEl, QUESTIONS, 5000);
-const credRotator = makeRotator(credEl, CREDIBILITY, 7000);
+const questionRotator = makeRotator(questionEl, QUESTIONS, 7000);
+const credRotator = makeRotator(credEl, CREDIBILITY, 9000);
 
 // Pause headline rotation while the visitor is engaging with the field —
 // don't pull the question out from under them mid-thought. The credibility
