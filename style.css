@@ -72,8 +72,11 @@ main {
     margin: 36px auto 0;
     font-size: 13px;
     color: #5a6868;
-    max-width: 400px;
+    max-width: 440px;
     line-height: 1.45;
+    min-height: 2.9em;
+    transition: opacity 0.35s ease;
+    opacity: 1;
 }
 
 .form {
@@ -158,5 +161,5 @@ main {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
     }
-    .question { opacity: 1 !important; }
+    .question, .credibility { opacity: 1 !important; }
 }
