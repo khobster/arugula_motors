@@ -29,23 +29,31 @@ main {
 .brand {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 56px;
+    gap: 12px;
+    margin-bottom: 12px;
 }
 
 .brand .leaf {
-    width: 36px;
+    width: 44px;
     height: auto;
     display: block;
     flex-shrink: 0;
 }
 
 .brand .wordmark {
-    font-size: 28px;
+    font-size: 30px;
     font-weight: 700;
     letter-spacing: -0.01em;
     color: #1a1a1a;
     line-height: 1;
+}
+
+.tagline {
+    font-size: 15px;
+    color: #6b7878;
+    margin: 0 auto 48px;
+    max-width: 440px;
+    line-height: 1.45;
 }
 
 .question {
@@ -54,6 +62,14 @@ main {
     line-height: 1.32;
     margin: 0 0 28px;
     color: #1a1a1a;
+}
+
+.credibility {
+    margin: 36px auto 0;
+    font-size: 13px;
+    color: #8a9595;
+    max-width: 400px;
+    line-height: 1.45;
 }
 
 .form {
@@ -138,8 +154,10 @@ main {
 .chip:active { background: #dde9c2; }
 
 @media (max-width: 480px) {
-    .brand { margin-bottom: 40px; }
-    .brand .wordmark { font-size: 24px; }
-    .brand .leaf { width: 30px; }
+    .brand { margin-bottom: 10px; gap: 10px; }
+    .brand .wordmark { font-size: 26px; }
+    .brand .leaf { width: 38px; }
+    .tagline { font-size: 14px; margin-bottom: 36px; }
+    .credibility { font-size: 12px; margin-top: 28px; }
     .chip { font-size: 12px; padding: 6px 12px; }
 }
