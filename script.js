@@ -2,6 +2,7 @@ const FORMSPREE_URL = 'https://formspree.io/f/mvzyogdl';
 
 const QUESTIONS = [
     "What software are you tired of paying for?",
+    "Sick of your site looking like every other Squarespace?",
     "What would you fix about your website if it didn't cost $20k?",
     "Tired of DoorDash eating 30% of every order?",
     "What do you wish you had instead of Toast?",
@@ -10,6 +11,7 @@ const QUESTIONS = [
 
 const CREDIBILITY = [
     "we built our own POS to replace Toast. yours can be cooler.",
+    "we built a small biz a one-of-a-kind site for less than a year of Squarespace.",
     "we built a Chinese restaurant their own delivery app — their drivers, their prices.",
     "we built a contractor his own quote-and-invoice tool. monthly bill gone.",
     "we built a barbershop their own booking + text reminders. one-time cost.",
