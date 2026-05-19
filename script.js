@@ -1,7 +1,43 @@
 const FORMSPREE_URL = 'https://formspree.io/f/mvzyogdl';
 const TRAV2TAY_URL = 'https://trav2tay.com';
 
+const QUESTIONS = [
+    "What's eating your time and money?",
+    "What's the thing you wish ran itself?",
+    "What part of your business drives you up a wall?",
+];
+
 const stepEl = document.getElementById('step');
+const questionEl = document.getElementById('messQuestion');
+
+const REDUCED_MOTION = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+let qIdx = 0;
+let qTimer = null;
+
+function showQuestion(text) {
+    questionEl.style.opacity = '0';
+    setTimeout(() => {
+        questionEl.textContent = text;
+        questionEl.style.opacity = '1';
+    }, 350);
+}
+
+function startQuestionRotation() {
+    if (qTimer || REDUCED_MOTION) return;
+    qTimer = setInterval(() => {
+        qIdx = (qIdx + 1) % QUESTIONS.length;
+        showQuestion(QUESTIONS[qIdx]);
+    }, 7000);
+}
+
+function stopQuestionRotation() {
+    if (!qTimer) return;
+    clearInterval(qTimer);
+    qTimer = null;
+}
+
+startQuestionRotation();
 
 // --- Three-stage flow ---
 // Stage 1: capture the vent (don't send yet)
@@ -16,12 +52,19 @@ bindStageOne();
 function bindStageOne() {
     const form = document.getElementById('messForm');
     const field = document.getElementById('messField');
-    const questionEl = document.getElementById('messQuestion');
+
+    // Pause rotation while the visitor is engaging with the field —
+    // don't pull the question out from under them mid-thought.
+    field.addEventListener('focus', stopQuestionRotation);
+    field.addEventListener('blur', () => {
+        if (!field.value.trim()) startQuestionRotation();
+    });
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         const message = field.value.trim();
         if (!message) { field.focus(); return; }
+        stopQuestionRotation();
         pendingVent = { mess: message, prompt: questionEl.textContent };
         showContactStage();
     });

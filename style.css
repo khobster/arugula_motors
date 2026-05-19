@@ -56,6 +56,15 @@ main {
 .tagline {
     font-size: 15px;
     color: #4a5a5a;
+    margin: 0 auto 6px;
+    max-width: 460px;
+    line-height: 1.45;
+}
+
+.subtagline {
+    font-size: 14px;
+    color: #6a7878;
+    font-style: italic;
     margin: 0 auto 48px;
     max-width: 460px;
     line-height: 1.45;
@@ -71,6 +80,9 @@ main {
     line-height: 1.32;
     margin: 0 0 28px;
     color: #1a1a1a;
+    min-height: 2.6em;
+    transition: opacity 0.35s ease;
+    opacity: 1;
 }
 
 .form {
@@ -194,7 +206,9 @@ main {
     .brand { margin-bottom: 12px; gap: 12px; }
     .brand .wordmark { font-size: 30px; }
     .brand .leaf { width: 68px; }
-    .tagline { font-size: 14px; margin-bottom: 36px; }
+    .tagline { font-size: 14px; margin-bottom: 4px; }
+    .subtagline { font-size: 13px; margin-bottom: 36px; }
+    .question { min-height: 3em; }
     .thanks { font-size: 18px; }
     .footer { font-size: 12px; margin-top: 24px; }
 }
@@ -204,4 +218,5 @@ main {
         transition-duration: 0.01ms !important;
         animation-duration: 0.01ms !important;
     }
+    .question { opacity: 1 !important; }
 }
