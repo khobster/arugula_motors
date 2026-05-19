@@ -1,5 +1,5 @@
 const FORMSPREE_URL = 'https://formspree.io/f/mvzyogdl';
-const TRAV2TAY_URL = 'https://trav2tay.com';
+const TRAV2TAY_URL = 'https://khobster.github.io/trav2tay/';
 
 const QUESTIONS = [
     "What's eating your time and money?",
