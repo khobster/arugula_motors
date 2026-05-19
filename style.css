@@ -158,6 +158,37 @@ main {
     padding: 12px 0;
 }
 
+.stage-prompt {
+    font-size: 18px;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin: 0 0 4px;
+    line-height: 1.35;
+}
+
+.skip-link {
+    background: none;
+    border: none;
+    padding: 4px 8px;
+    font: inherit;
+    font-size: 13px;
+    color: #7a8888;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    align-self: center;
+    margin-top: -4px;
+    min-height: auto;
+    border-radius: 4px;
+    touch-action: manipulation;
+}
+
+.skip-link:hover { color: #4a5a5a; }
+.skip-link:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(34, 102, 200, 0.25);
+}
+
 @media (max-width: 480px) {
     .brand { margin-bottom: 12px; gap: 12px; }
     .brand .wordmark { font-size: 30px; }

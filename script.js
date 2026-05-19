@@ -21,7 +21,6 @@ const CREDIBILITY = [
 const form = document.getElementById('messForm');
 const field = document.getElementById('messField');
 const status = document.getElementById('status');
-const button = form.querySelector('button');
 const questionEl = document.getElementById('messQuestion');
 const credEl = document.getElementById('credibility');
 
@@ -70,18 +69,60 @@ field.addEventListener('blur', () => {
 questionRotator.start();
 credRotator.start();
 
+// --- Two-stage submission flow ---
+// Stage 1: capture the vent (don't send yet)
+// Stage 2: gently ask for email so we can reply (skippable)
+// Final:   send vent + (optional) email to Formspree, show thanks
+
+let stage = 1;
+let pendingVent = null;
+
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const message = field.value.trim();
-    if (!message) {
-        field.focus();
-        return;
-    }
 
-    status.textContent = 'Sending…';
-    button.disabled = true;
+    if (stage === 1) {
+        const message = field.value.trim();
+        if (!message) { field.focus(); return; }
+        pendingVent = { mess: message, prompt: questionEl.textContent };
+        showEmailStage();
+    } else {
+        const email = (document.getElementById('emailField').value || '').trim();
+        if (!email) { document.getElementById('emailField').focus(); return; }
+        await sendFinal(email);
+    }
+});
+
+function showEmailStage() {
+    stage = 2;
+    form.innerHTML = `
+        <p class="stage-prompt">Got it. Want to hear back?</p>
+        <input
+            id="emailField"
+            name="email"
+            type="email"
+            autocomplete="email"
+            placeholder="your@email.com"
+            required
+            aria-label="Your email"
+        >
+        <button type="submit">Send</button>
+        <button type="button" id="skipBtn" class="skip-link">no thanks, I just needed to vent</button>
+        <p class="status" id="status" role="status" aria-live="polite"></p>
+    `;
+    setTimeout(() => document.getElementById('emailField').focus(), 50);
+    document.getElementById('skipBtn').addEventListener('click', () => sendFinal(null));
+}
+
+async function sendFinal(email) {
+    const status = document.getElementById('status');
+    const buttons = form.querySelectorAll('button');
+    buttons.forEach(b => b.disabled = true);
+    if (status) status.textContent = 'Sending…';
     questionRotator.stop();
     credRotator.stop();
+
+    const payload = { ...pendingVent };
+    if (email) payload.email = email;
 
     try {
         const res = await fetch(FORMSPREE_URL, {
@@ -90,12 +131,15 @@ form.addEventListener('submit', async (e) => {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ mess: message, prompt: questionEl.textContent }),
+            body: JSON.stringify(payload),
         });
         if (!res.ok) throw new Error('submit failed');
-        form.innerHTML = '<p class="thanks">Thanks — we\'ll be in touch.</p>';
+        const msg = email
+            ? "All set. We'll be in touch soon."
+            : "Got it. Thanks for venting.";
+        form.innerHTML = `<p class="thanks">${msg}</p>`;
     } catch (err) {
-        status.textContent = 'Something went wrong. Try again?';
-        button.disabled = false;
+        if (status) status.textContent = 'Something went wrong. Try again?';
+        buttons.forEach(b => b.disabled = false);
     }
-});
+}
