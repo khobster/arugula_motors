@@ -110,7 +110,6 @@ main {
 .creature.pacman {
     width: 32px;
     height: 32px;
-    transform: scaleX(-1);
     animation: cross 4s linear infinite;
 }
 
@@ -363,6 +362,23 @@ main {
     line-height: 1;
     margin-bottom: 10px;
     user-select: none;
+    display: inline-block;
+}
+
+.product-emoji-broom,
+.emoji-hero-broom {
+    transform-origin: 65% 25%;
+    animation: broom-sweep 2.4s ease-in-out infinite;
+}
+
+@keyframes broom-sweep {
+    0%, 100% { transform: rotate(-14deg); }
+    50%      { transform: rotate(14deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .product-emoji-broom,
+    .emoji-hero-broom { animation: none; transform: none; }
 }
 
 .product-linked {
