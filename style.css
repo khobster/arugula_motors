@@ -249,6 +249,13 @@ main {
     transition: background 0.15s;
 }
 
+.product-emoji {
+    font-size: 32px;
+    line-height: 1;
+    margin-bottom: 10px;
+    user-select: none;
+}
+
 .product-linked {
     border-color: #d4dde8;
 }
