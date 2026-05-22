@@ -7,6 +7,8 @@ const QUESTIONS = [
     "What part of your business drives you up a wall?",
 ];
 
+const CREATURES = ['pacman', 'runner', 'car'];
+
 const stepEl = document.getElementById('step');
 const questionEl = document.getElementById('messQuestion');
 
@@ -15,11 +17,18 @@ const REDUCED_MOTION = window.matchMedia('(prefers-reduced-motion: reduce)').mat
 let qIdx = 0;
 let qTimer = null;
 
-function showQuestion(text) {
+function setCreature(name) {
+    const creature = document.getElementById('creature');
+    if (!creature) return;
+    creature.className = 'creature ' + name;
+}
+
+function showQuestion(text, idx) {
     questionEl.style.opacity = '0';
     setTimeout(() => {
         questionEl.textContent = text;
         questionEl.style.opacity = '1';
+        setCreature(CREATURES[idx]);
     }, 350);
 }
 
@@ -27,7 +36,7 @@ function startQuestionRotation() {
     if (qTimer || REDUCED_MOTION) return;
     qTimer = setInterval(() => {
         qIdx = (qIdx + 1) % QUESTIONS.length;
-        showQuestion(QUESTIONS[qIdx]);
+        showQuestion(QUESTIONS[qIdx], qIdx);
     }, 7000);
 }
 

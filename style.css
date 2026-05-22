@@ -78,11 +78,107 @@ main {
     font-size: clamp(22px, 4.6vw, 30px);
     font-weight: 500;
     line-height: 1.32;
-    margin: 0 0 28px;
+    margin: 0 0 14px;
     color: #1a1a1a;
     min-height: 2.6em;
     transition: opacity 0.35s ease;
     opacity: 1;
+}
+
+.animation-track {
+    height: 36px;
+    margin: 0 0 14px;
+    position: relative;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.creature {
+    position: absolute;
+    top: 50%;
+    left: -50px;
+    margin-top: -16px;
+}
+
+@keyframes cross {
+    from { left: -50px; }
+    to { left: calc(100% + 10px); }
+}
+
+.creature.pacman {
+    width: 32px;
+    height: 32px;
+    animation: cross 4s linear infinite;
+}
+
+.creature.pacman::before,
+.creature.pacman::after {
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 16px;
+    background: #FFC107;
+    left: 0;
+}
+
+.creature.pacman::before {
+    top: 0;
+    border-radius: 32px 32px 0 0;
+    transform-origin: 50% 100%;
+    animation: chomp-top 0.35s ease-in-out infinite;
+}
+
+.creature.pacman::after {
+    bottom: 0;
+    border-radius: 0 0 32px 32px;
+    transform-origin: 50% 0;
+    animation: chomp-bottom 0.35s ease-in-out infinite;
+}
+
+@keyframes chomp-top {
+    0%, 100% { transform: rotate(0); }
+    50% { transform: rotate(-30deg); }
+}
+
+@keyframes chomp-bottom {
+    0%, 100% { transform: rotate(0); }
+    50% { transform: rotate(30deg); }
+}
+
+.creature.runner {
+    font-size: 28px;
+    line-height: 1;
+    width: 32px;
+    height: 32px;
+    animation: cross 3.5s linear infinite;
+}
+
+.creature.runner::before {
+    content: '🏃';
+    display: inline-block;
+    animation: bob 0.3s ease-in-out infinite alternate;
+}
+
+@keyframes bob {
+    from { transform: translateY(0); }
+    to { transform: translateY(-3px); }
+}
+
+.creature.car {
+    font-size: 28px;
+    line-height: 1;
+    width: 32px;
+    height: 32px;
+    animation: cross 2.5s linear infinite;
+}
+
+.creature.car::before {
+    content: '🚗';
+    display: inline-block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .animation-track { display: none; }
 }
 
 .form {
