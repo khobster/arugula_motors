@@ -53,7 +53,7 @@ function bindStageOne() {
     const form = document.getElementById('messForm');
     const field = document.getElementById('messField');
 
-    // Pause rotation while the visitor is engaging with the field —
+    // Pause rotation while the visitor is engaging with the field, so we
     // don't pull the question out from under them mid-thought.
     field.addEventListener('focus', stopQuestionRotation);
     field.addEventListener('blur', () => {
@@ -129,7 +129,7 @@ function showHandoff() {
     stage = 3;
     stepEl.innerHTML = `
         <p class="thanks">Loud and clear. I'm probably out walking around Charleston talking to local shops right now, but I'll look at this tonight and reach out.</p>
-        <p class="easter-egg">P.S. If you need to kill a few minutes today, I built a little game called trav2tay. Try to get old big boy Travis to his boo&mdash;it's tougher than it seems.</p>
+        <p class="easter-egg">P.S. If you need to kill a few minutes today, I built a little game called trav2tay. Try to get old big boy Travis to his boo. It's tougher than it seems.</p>
         <a class="play-link" href="${TRAV2TAY_URL}" target="_blank" rel="noopener">Play trav2tay</a>
     `;
 }

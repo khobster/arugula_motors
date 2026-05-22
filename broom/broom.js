@@ -34,7 +34,7 @@ form.addEventListener('submit', async (e) => {
             }),
         });
         if (!res.ok) throw new Error('submit failed');
-        form.innerHTML = `<p class="thanks">Got it. I'll get back to you within a day. — Kevin</p>`;
+        form.innerHTML = `<p class="thanks">Got it. I'll get back to you within a day.<br>Kevin</p>`;
     } catch (err) {
         status.textContent = 'Something went wrong. Try again?';
         button.disabled = false;
