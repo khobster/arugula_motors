@@ -1,0 +1,28 @@
+# Arugula Motors
+
+> Arugula Motors builds custom websites, software, and dashboards for local businesses in Charleston, South Carolina. You own what we build, instead of renting it from a SaaS company.
+
+Founded and run by Kevin in Charleston, SC. The work is done by one person who builds and maintains the software himself. Contact is through the form at https://www.arugulamotors.com.
+
+## Products
+
+- [Beacon](https://www.arugulamotors.com/beacon/): Get found when customers ask AI tools (ChatGPT, Claude, Perplexity, Google's AI) for a recommendation. Covers GEO (getting mentioned inside AI answers) and AEO (getting cited in voice search and AI overviews), with monthly visibility tracking. No guarantees, no contract, cancel anytime. Price: $1,500 setup plus $300 a month.
+- [White Bread](https://www.arugulamotors.com/white-bread/): A point of sale system for pizza, sandwich, and counter shops. You pay once and own it, including the source code, instead of renting Toast per terminal. Price: $22,000 for a single shop build.
+- [Broom](https://www.arugulamotors.com/broom/): Cleaning and turnover software for short-term rental operators. You own it, instead of renting Turno, Properly, or Breezeway. Price: $12,000 for up to 25 properties.
+
+## On the bench (built on request)
+
+- Diary: bookings and reservations
+- Pigeon: email newsletter
+- Tab: loyalty and punch cards
+- Plot: staff scheduling
+
+## More
+
+- [About](https://www.arugulamotors.com/about/): Who is behind Arugula Motors, and answers to common questions.
+
+## How Arugula Motors is different
+
+- You own what we build. Source code and full ownership on delivery, no subscriptions, no per terminal fees, no lock-in. Beacon is the exception, since it is an ongoing monthly service.
+- Local to Charleston, South Carolina. Works with Lowcountry businesses in person and on software projects remotely.
+- Built and run by one person, so feedback turns into fixes the same day.

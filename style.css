@@ -426,12 +426,48 @@ main {
     font-style: italic;
 }
 
+.faq {
+    width: 100%;
+    max-width: 560px;
+    margin: 56px auto 0;
+    text-align: left;
+}
+
+.faq-item {
+    margin: 0 0 18px;
+}
+
+.faq-q {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 4px;
+    letter-spacing: -0.01em;
+}
+
+.faq-a {
+    font-size: 14px;
+    color: #4a5a5a;
+    line-height: 1.55;
+    margin: 0;
+}
+
 .footer {
     margin-top: 48px;
     font-size: 13px;
     color: #7a8888;
     text-align: center;
     width: 100%;
+}
+
+.footer-link {
+    color: #7a8888;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.footer-link:hover {
+    color: #1a6fd0;
 }
 
 .palmetto {
