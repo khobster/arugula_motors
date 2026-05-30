@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>How we get found by AI | Beacon by Arugula Motors</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #fbf9f5; color: #1f1c19;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased; line-height: 1.55; padding: 76px 28px; }
+  .wrap { max-width: 680px; margin: 0 auto; }
+  .brand { display: flex; align-items: center; gap: 10px; margin-bottom: 28px; }
+  .brand b { font-size: 18px; letter-spacing: -0.01em; }
+  h1 { font-size: clamp(28px, 5vw, 40px); line-height: 1.1; letter-spacing: -0.02em; margin: 0 0 8px; }
+  .sub { color: #6a635a; font-size: 15px; margin: 0 0 22px; }
+  .hook { font-size: 17px; line-height: 1.6; color: #3a352f; margin: 0 0 34px; }
+  .nudge { background: #f6f1fb; border: 1px solid #e3d7f0; border-left: 4px solid #5A2D81;
+    border-radius: 12px; padding: 20px 22px; margin-bottom: 20px; }
+  .nudge-label { font-size: 13px; font-weight: 700; color: #5A2D81; margin-bottom: 8px; }
+  .nudge p { margin: 6px 0; font-size: 15px; color: #3a352f; }
+  .nudge-q { font-size: 17px !important; font-weight: 700; color: #1f1c19 !important; }
+  .card { background: #fff; border: 1px solid #ece7df; border-radius: 16px; padding: 36px; margin-bottom: 34px; }
+  .score { text-align: center; padding: 36px 28px; }
+  .score .big { font-size: clamp(56px, 14vw, 92px); font-weight: 800; letter-spacing: -0.03em;
+    color: #5A2D81; line-height: 1; }
+  .score .label { font-size: 16px; color: #3a352f; margin-top: 8px; }
+  .score .meta { font-size: 13px; color: #9a9388; margin-top: 10px; }
+  h2 { font-size: 18px; margin: 0 0 4px; }
+  .hint { font-size: 13px; color: #9a9388; margin: 0 0 18px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  td { padding: 10px 8px; border-bottom: 1px solid #f1ece4; vertical-align: top; }
+  td.prompt { color: #3a352f; }
+  td.rate { width: 56px; text-align: center; font-variant-numeric: tabular-nums; font-weight: 700; }
+  td.status { width: 84px; text-align: right; font-size: 13px; }
+  .hit { color: #2e7d3a; }
+  .miss { color: #b08a3a; }
+  .section-h { font-size: 22px; letter-spacing: -0.01em; margin: 16px 0 14px; }
+  .stats { display: flex; flex-wrap: wrap; gap: 18px; margin: 0 0 22px; }
+  .stat { flex: 1 1 180px; background: #fff; border: 1px solid #ece7df; border-radius: 14px;
+    padding: 26px 18px; text-align: center; }
+  .stat-n { font-size: 42px; font-weight: 800; letter-spacing: -0.02em; color: #5A2D81; line-height: 1; }
+  .stat-c { font-size: 13px; color: #3a352f; line-height: 1.45; margin-top: 12px; }
+  .stat-src { font-size: 11px; color: #b3aca1; margin-top: 10px; }
+  .stat.featured { border-color: #c9a9ec; background: #faf6ff; animation: glow 2.8s ease-in-out infinite; }
+  .stat.featured .stat-n { font-size: 48px; }
+  @keyframes glow {
+    0%, 100% { box-shadow: 0 0 0 rgba(90, 45, 129, 0); }
+    50% { box-shadow: 0 0 24px rgba(90, 45, 129, 0.28); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .stat.featured { animation: none; }
+  }
+  .foot { font-size: 12px; color: #9a9388; text-align: center; margin-top: 28px; line-height: 1.6; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand"><svg viewBox="0 0 30 56" width="22" height="41" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="12" y="0" width="6" height="48" fill="#ECDCFB"/><rect x="8" y="0" width="4" height="48" fill="#8E5FC0"/><rect x="18" y="0" width="4" height="48" fill="#8E5FC0"/><rect x="6" y="0" width="2" height="48" fill="#5A2D81"/><rect x="22" y="0" width="2" height="48" fill="#5A2D81"/><rect x="8" y="48" width="14" height="4" fill="#5A2D81"/><rect x="10" y="52" width="10" height="4" fill="#3A2456"/></svg><b>Beacon</b><span style="color:#9a9388;font-size:13px;">by Arugula Motors</span></div>
+
+  <h1>How we get found by AI</h1>
+  <p class="sub">We applied Beacon to our own site, Arugula Motors, and we track it every week. This is the honest before and after.</p>
+
+  <p class="hook">More people skip the search bar now and just ask AI for the answer. They ask ChatGPT, Claude, Perplexity, and Google Gemini for the best spot near them, and they trust the short list that comes back. If your business is not on that list, you do not exist to them. It is like not being on page one of Google, except now there is no page two.</p>
+
+  <h2 class="section-h">Search is not what it was</h2>
+  <p class="hook">And it is not just chatbots. Google itself now answers most questions right at the top of the page with AI, so people read the answer and never click through to a website. The old game was ranking on a list of blue links. The new game is being inside the answer.</p>
+  <div class="stats">
+    <div class="stat"><div class="stat-n">45%</div><div class="stat-c">of consumers now use AI to find local businesses, up from 6% a year earlier</div><div class="stat-src">BrightLocal, 2026</div></div>
+<div class="stat"><div class="stat-n">65%</div><div class="stat-c">of Google searches now end without a click to any website</div><div class="stat-src">Zero-click search studies, 2026</div></div>
+<div class="stat featured"><div class="stat-n">1.2%</div><div class="stat-c">of local businesses ever get recommended by AI. The other 98.8% are invisible</div><div class="stat-src">SOCi Local Visibility Index, 2026</div></div>
+
+  </div>
+
+  <div class="card score">
+    <div class="big">0%</div>
+    <div class="label">of the time, Arugula Motors shows up when people ask AI</div>
+    <div class="meta">as of 2026-05-30 &middot; the starting line &middot; tracked across Claude</div>
+  </div>
+
+  <div class="nudge">
+    <div class="nudge-label">Don't take our word for it</div>
+    <p>Open ChatGPT, Claude, Perplexity, or Google's AI right now and ask it:</p>
+    <p class="nudge-q">&ldquo;Who builds custom software for small businesses in Charleston, SC?&rdquo;</p>
+    <p>See whether Arugula Motors comes up. That ten second test is the whole problem, and the whole opportunity.</p>
+  </div>
+
+  <div class="card">
+    <h2>The trend</h2>
+    <p class="hint">How often Arugula Motors appears in AI answers, week over week. Tracking since 2026-05-29.</p>
+    <svg viewBox="0 0 660 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mention rate over time">
+<line x1="44" y1="200.0" x2="642" y2="200.0" stroke="#ece7df" stroke-width="1"/>
+<text x="36" y="204.0" text-anchor="end" font-size="11" fill="#9a9388">0%</text>
+<line x1="44" y1="154.5" x2="642" y2="154.5" stroke="#ece7df" stroke-width="1"/>
+<text x="36" y="158.5" text-anchor="end" font-size="11" fill="#9a9388">25%</text>
+<line x1="44" y1="109.0" x2="642" y2="109.0" stroke="#ece7df" stroke-width="1"/>
+<text x="36" y="113.0" text-anchor="end" font-size="11" fill="#9a9388">50%</text>
+<line x1="44" y1="63.5" x2="642" y2="63.5" stroke="#ece7df" stroke-width="1"/>
+<text x="36" y="67.5" text-anchor="end" font-size="11" fill="#9a9388">75%</text>
+<line x1="44" y1="18.0" x2="642" y2="18.0" stroke="#ece7df" stroke-width="1"/>
+<text x="36" y="22.0" text-anchor="end" font-size="11" fill="#9a9388">100%</text>
+<text x="44.0" y="220" text-anchor="middle" font-size="11" fill="#9a9388">05-29</text>
+<text x="642.0" y="220" text-anchor="middle" font-size="11" fill="#9a9388">05-30</text>
+<polyline points="44.0,200.0 642.0,200.0" fill="none" stroke="#5A2D81" stroke-width="3" stroke-linejoin="round"/>
+<circle cx="44.0" cy="200.0" r="4.5" fill="#5A2D81"/>
+<circle cx="642.0" cy="200.0" r="4.5" fill="#5A2D81"/>
+</svg>
+  </div>
+
+  <div class="card">
+    <h2>Question by question</h2>
+    <p class="hint">Real questions a customer might ask an AI tool, and whether Arugula Motors comes up (latest check, 2026-05-30).</p>
+    <table>
+      <tbody>
+        <tr><td class="prompt">Who builds custom software for small businesses in Charleston, SC?</td><td class="rate miss">0/3</td><td class="status miss">not yet</td></tr>
+<tr><td class="prompt">I run a small pizza shop and I am tired of paying Toast every month. Is there an alternative where I own the point of sale?</td><td class="rate miss">0/3</td><td class="status miss">not yet</td></tr>
+<tr><td class="prompt">Who can help my local business show up in AI search results like ChatGPT?</td><td class="rate miss">0/3</td><td class="status miss">not yet</td></tr>
+<tr><td class="prompt">Best custom website developer for a local business in Charleston, South Carolina</td><td class="rate miss">0/3</td><td class="status miss">not yet</td></tr>
+<tr><td class="prompt">Is there a Charleston company that builds software you own instead of SaaS subscriptions?</td><td class="rate miss">0/3</td><td class="status miss">not yet</td></tr>
+<tr><td class="prompt">Who does GEO or AEO for small businesses near Charleston, South Carolina?</td><td class="rate miss">0/3</td><td class="status miss">not yet</td></tr>
+<tr><td class="prompt">Affordable alternative to Toast point of sale for a sandwich shop</td><td class="rate miss">0/3</td><td class="status miss">not yet</td></tr>
+<tr><td class="prompt">How can a small business get recommended by ChatGPT, Claude, and Perplexity?</td><td class="rate miss">0/3</td><td class="status miss">not yet</td></tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <p class="foot">
+    Measured by asking each engine the questions above 3 times per check (answers vary run to run),
+    and counting how often the business is named. API results approximate, and are not identical to,
+    the consumer apps. Google AI Overviews tracked separately.<br>
+    Beacon by Arugula Motors &middot; Charleston, South Carolina
+  </p>
+</div>
+</body>
+</html>

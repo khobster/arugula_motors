@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="theme-color" content="#ffffff">
-    <title>Arugula Motors | Custom software, websites, and dashboards in Charleston, SC</title>
-    <meta name="description" content="Arugula Motors builds custom websites, software, and dashboards for local businesses in Charleston, South Carolina. You own what we build instead of renting SaaS. Home of Beacon (get found by AI) and White Bread (a point of sale you own).">
+    <title>Arugula Motors | Get your business found by AI in Charleston, SC</title>
+    <meta name="description" content="Arugula Motors gets local businesses found when customers ask AI like ChatGPT, Copilot, and Google. Get a free AI visibility report. Plus custom software, made in Charleston, South Carolina.">
     <link rel="canonical" href="https://www.arugulamotors.com/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Arugula Motors">
     <meta property="og:title" content="Arugula Motors">
-    <meta property="og:description" content="Custom websites, software, and dashboards for local businesses. Built in Charleston, South Carolina.">
+    <meta property="og:description" content="Get found when customers ask AI for a business like yours. Free AI visibility report. Made in Charleston.">
     <meta property="og:url" content="https://www.arugulamotors.com/">
     <meta property="og:image" content="https://www.arugulamotors.com/favicon-512.png">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Arugula Motors">
-    <meta name="twitter:description" content="Custom websites, software, and dashboards for local businesses. Built in Charleston, South Carolina.">
+    <meta name="twitter:description" content="Get found when customers ask AI for a business like yours. Free AI visibility report. Made in Charleston.">
     <meta name="twitter:image" content="https://www.arugulamotors.com/favicon-512.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
     <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
@@ -115,17 +115,21 @@
     </script>
 </head>
 <body>
+    <header class="site-header">
+        <a href="./builds/" class="nav-side nav-left">Custom software</a>
+        <a href="./" class="site-brand">arugula motors</a>
+        <a href="./beacon/" class="nav-side nav-right">Beacon</a>
+    </header>
     <main>
         <div class="brand">
             <img class="leaf" src="arugula-flame.png" alt="Arugula Motors flame mark" width="708" height="488">
-            <span class="wordmark">arugula motors</span>
         </div>
 
-        <p class="tagline">Custom websites, software, and dashboards for local businesses.</p>
-        <p class="subtagline">Your own little engines that do the work for you.</p>
+        <p class="tagline">Custom software and AI search visibility for local businesses.</p>
+        <p class="subtagline"><img class="palmetto" src="palmetto.svg" alt="" width="17" height="18" aria-hidden="true">Made in Charleston, South Carolina.</p>
 
         <div id="step" class="step">
-            <h1 class="question" id="messQuestion">What's eating your time and money?</h1>
+            <h1 class="question" id="messQuestion">Does ChatGPT recommend your business?</h1>
 
             <div class="animation-track" aria-hidden="true">
                 <div class="creature pacman" id="creature"></div>
@@ -134,44 +138,42 @@
             <form id="messForm" class="form" novalidate>
                 <input
                     id="messField"
-                    name="mess"
+                    name="business"
                     type="text"
                     autocomplete="off"
                     autofocus
                     required
-                    placeholder="e.g. Toast, your site, vendor fees, anything"
+                    placeholder="Plug in your business and city, and let's see"
                     aria-labelledby="messQuestion"
                 >
-                <button type="submit">Let's fix it.</button>
+                <button type="submit">Run my free report</button>
+                <p class="form-note">I'll email you the results, usually within a day.</p>
+                <p class="engine-note">Checks ChatGPT, Google Gemini, Claude, Copilot, and Perplexity.</p>
                 <p class="status" id="status" role="status" aria-live="polite"></p>
             </form>
         </div>
     </main>
 
-    <section class="products" aria-label="What we build">
-        <h2 class="products-title">what we build</h2>
-        <ul class="product-list">
+    <section class="products" aria-label="After the report">
+        <h2 class="products-title">after the report</h2>
+        <p class="products-lead">The report shows where you stand today. Beacon is how I get you showing up, and keep you there.</p>
+        <ul class="product-list single">
             <li class="product product-linked">
                 <a href="./beacon/" class="product-link">
                     <img class="product-mark-card" src="./beacon/beacon-mark.svg" alt="" width="15" height="28" aria-hidden="true">
                     <span class="product-name">Beacon</span>
                     <span class="product-replaces">get found by AI</span>
-                    <span class="product-desc">Get found when customers ask ChatGPT, Claude, and Google's AI instead of searching.</span>
-                </a>
-            </li>
-            <li class="product product-linked">
-                <a href="./white-bread/" class="product-link">
-                    <img class="product-mark-card" src="./white-bread/whitebread-mark.svg" alt="" width="22" height="20" aria-hidden="true">
-                    <span class="product-name">White Bread</span>
-                    <span class="product-replaces">replaces Toast</span>
-                    <span class="product-desc">A POS for pizza, sandwich, and counter shops. Owned, not rented.</span>
+                    <span class="product-desc">The report is the diagnosis. Beacon is the fix: I get your business into AI answers and track it every month.</span>
                 </a>
             </li>
         </ul>
-        <p class="products-bench">Also on the bench: Diary, Pigeon, Tab, Plot. Built on request.</p>
+        <p class="products-bench">I also build custom software you own: point of sale, dashboards, and tools.<br><a class="footer-link" href="./builds/">See what I build →</a></p>
     </section>
 
-    <footer class="footer"><img class="palmetto" src="palmetto.svg" alt="" width="17" height="18" aria-hidden="true">Locally built in Charleston, South Carolina. <a class="footer-link" href="./about/">About</a></footer>
+    <footer class="footer">
+        <a class="footer-link footer-about" href="./about/">About</a>
+        <img class="palmetto" src="palmetto.svg" alt="" width="17" height="18" aria-hidden="true">Locally built in Charleston, South Carolina.
+    </footer>
 
     <script src="script.js"></script>
 </body>

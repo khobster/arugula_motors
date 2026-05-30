@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#ffffff">
+    <title>Mic, by Arugula Motors</title>
+    <meta name="description" content="Mic is the easy way to run a podcast. Get a show set up and put out episodes consistently, which is how you build a following. Audio only. Made in Charleston.">
+    <meta property="og:title" content="Mic, by Arugula Motors">
+    <meta property="og:description" content="The easy way to run a podcast and actually keep putting out episodes.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Arugula Motors">
+    <meta property="og:url" content="https://www.arugulamotors.com/mic/">
+    <meta property="og:image" content="https://www.arugulamotors.com/favicon-512.png">
+    <link rel="canonical" href="https://www.arugulamotors.com/mic/">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../favicon-512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "name": "Mic",
+          "url": "https://www.arugulamotors.com/mic/",
+          "serviceType": "Podcast setup and production for small businesses",
+          "description": "Mic gets a local business set up with a podcast and an easy way to keep putting out episodes, so they build a following. Audio only. Done with you or done for you.",
+          "provider": {
+            "@type": "ProfessionalService",
+            "@id": "https://www.arugulamotors.com/#org",
+            "name": "Arugula Motors",
+            "url": "https://www.arugulamotors.com/",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Charleston",
+              "addressRegion": "SC",
+              "addressCountry": "US"
+            }
+          },
+          "areaServed": { "@type": "City", "name": "Charleston, South Carolina" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Arugula Motors", "item": "https://www.arugulamotors.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Custom software", "item": "https://www.arugulamotors.com/builds/" },
+            { "@type": "ListItem", "position": 3, "name": "Mic", "item": "https://www.arugulamotors.com/mic/" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="product-page">
+    <main class="product-main">
+        <a href="../builds/" class="back-link">← custom software</a>
+
+        <img class="product-mark" src="mic-mark.svg" alt="" width="128" height="224" aria-hidden="true">
+
+        <h1 class="product-h1">Mic</h1>
+        <p class="product-lede">A podcast you'll actually keep up.</p>
+
+        <p>Most people start a podcast and quit by episode three. The gear, the editing, the figuring it out, it piles up fast. So the show stalls and the following never builds.</p>
+
+        <p>Mic takes all of that off your plate. You get a show that is set up and ready, and putting out episodes becomes genuinely easy, so you keep going. Showing up week after week is the whole game, and this is how you stay consistent.</p>
+
+        <h2>What you get</h2>
+        <p>A podcast that is ready to go and simple to feed. Episodes out the door without the editing rabbit hole. Audio only, which is all you need to build an audience. Run it yourself, or hand it to me and I run it for you.</p>
+
+        <h2>Why a podcast</h2>
+        <p>A podcast is the most direct way to build a real audience for a local business. People who listen to you every week trust you, and they buy from people they trust. It compounds, and it is yours, not rented from a platform that can change the rules.</p>
+
+        <h2>Want to talk?</h2>
+        <p>Tell me what your show would be about and I'll send you what it costs.</p>
+
+        <form id="micForm" class="prose-form" novalidate>
+            <input id="micName" name="name" type="text" placeholder="your name" autocomplete="name" required>
+            <input id="micContact" name="contact" type="text" placeholder="email or cell" autocomplete="email" required>
+            <input id="micBusiness" name="business" type="text" placeholder="what's your business?">
+            <textarea id="micMessage" name="message" placeholder="what would your show be about?" rows="4"></textarea>
+            <button type="submit">Send it</button>
+            <p class="status" id="status" role="status" aria-live="polite"></p>
+        </form>
+
+        <p class="locale"><img class="palmetto" src="../palmetto.svg" alt="" width="17" height="18" aria-hidden="true">Locally built in Charleston, South Carolina.</p>
+    </main>
+
+    <script src="mic.js"></script>
+</body>
+</html>

@@ -1,4 +1,11 @@
 const FORMSPREE_URL = 'https://formspree.io/f/mvzyogdl';
+const TRAV2TAY_URL = 'https://khobster.github.io/trav2tay/';
+
+const QUESTIONS = [
+    "What's eating your time and money?",
+    "What's the thing you wish ran itself?",
+    "What part of your business drives you up a wall?",
+];
 
 const CREATURES = ['pacman', 'runner', 'car'];
 
@@ -7,8 +14,8 @@ const questionEl = document.getElementById('messQuestion');
 
 const REDUCED_MOTION = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-// The question stays put; the little creatures keep running across the track.
-let cIdx = 0;
+let qIdx = 0;
+let qTimer = null;
 
 function setCreature(name) {
     const creature = document.getElementById('creature');
@@ -16,19 +23,37 @@ function setCreature(name) {
     creature.className = 'creature ' + name;
 }
 
-if (!REDUCED_MOTION) {
-    setInterval(() => {
-        cIdx = (cIdx + 1) % CREATURES.length;
-        setCreature(CREATURES[cIdx]);
+function showQuestion(text, idx) {
+    questionEl.style.opacity = '0';
+    setTimeout(() => {
+        questionEl.textContent = text;
+        questionEl.style.opacity = '1';
+        setCreature(CREATURES[idx]);
+    }, 350);
+}
+
+function startQuestionRotation() {
+    if (qTimer || REDUCED_MOTION) return;
+    qTimer = setInterval(() => {
+        qIdx = (qIdx + 1) % QUESTIONS.length;
+        showQuestion(QUESTIONS[qIdx], qIdx);
     }, 7000);
 }
 
-// --- Three-stage flow ---
-// Stage 1: capture the business (don't send yet)
-// Stage 2: ask where to send the report
-// Stage 3: handoff message
+function stopQuestionRotation() {
+    if (!qTimer) return;
+    clearInterval(qTimer);
+    qTimer = null;
+}
 
-let pending = null;
+startQuestionRotation();
+
+// --- Three-stage flow ---
+// Stage 1: capture the vent (don't send yet)
+// Stage 2: ask for email or cell so we can reply
+// Stage 3: handoff message + trav2tay easter egg
+
+let pendingVent = null;
 
 bindStageOne();
 
@@ -36,18 +61,26 @@ function bindStageOne() {
     const form = document.getElementById('messForm');
     const field = document.getElementById('messField');
 
+    // Pause rotation while the visitor is engaging with the field, so we
+    // don't pull the question out from under them mid-thought.
+    field.addEventListener('focus', stopQuestionRotation);
+    field.addEventListener('blur', () => {
+        if (!field.value.trim()) startQuestionRotation();
+    });
+
     form.addEventListener('submit', (e) => {
         e.preventDefault();
-        const business = field.value.trim();
-        if (!business) { field.focus(); return; }
-        pending = { business, prompt: questionEl ? questionEl.textContent : '' };
+        const message = field.value.trim();
+        if (!message) { field.focus(); return; }
+        stopQuestionRotation();
+        pendingVent = { mess: message, prompt: questionEl.textContent };
         showContactStage();
     });
 }
 
 function showContactStage() {
     stepEl.innerHTML = `
-        <h1 class="question">Where should I email your report?</h1>
+        <h1 class="question">Got it. I'm going to look into this. Where should I send my thoughts?</h1>
         <form id="contactForm" class="form" novalidate>
             <input
                 id="contactField"
@@ -58,7 +91,7 @@ function showContactStage() {
                 required
                 aria-label="Email or cell number"
             >
-            <button type="submit">Send it to me</button>
+            <button type="submit">Send</button>
             <p class="status" id="status" role="status" aria-live="polite"></p>
         </form>
     `;
@@ -80,7 +113,7 @@ async function sendFinal(contact) {
     if (button) button.disabled = true;
     if (status) status.textContent = 'Sending…';
 
-    const payload = { product: 'beacon-report', ...pending, contact };
+    const payload = { product: 'custom-software', ...pendingVent, contact };
 
     try {
         const res = await fetch(FORMSPREE_URL, {
@@ -101,6 +134,8 @@ async function sendFinal(contact) {
 
 function showHandoff() {
     stepEl.innerHTML = `
-        <p class="thanks">Got it. I'll check where you stand and email your report, usually within a day. Talk soon, Kevin.</p>
+        <p class="thanks">Loud and clear. I'm probably out walking around Charleston talking to local shops right now, but I'll look at this tonight and reach out.</p>
+        <p class="easter-egg">P.S. If you need to kill a few minutes today, I built a little game called trav2tay. Try to get old big boy Travis to his boo. It's tougher than it seems.</p>
+        <a class="play-link" href="${TRAV2TAY_URL}" target="_blank" rel="noopener">Play trav2tay</a>
     `;
 }
