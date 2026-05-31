@@ -79,7 +79,7 @@ main {
     font-weight: 600;
     line-height: 1.25;
     letter-spacing: -0.01em;
-    margin: 0;
+    margin: 0 0 22px;
     color: #1a1a1a;
     transition: opacity 0.35s ease;
     opacity: 1;
@@ -87,7 +87,7 @@ main {
 
 .animation-track {
     height: 34px;
-    margin: 6px 0 8px;
+    margin: 6px 0 14px;
     position: relative;
     overflow: hidden;
     pointer-events: none;
