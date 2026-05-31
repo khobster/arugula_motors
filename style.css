@@ -553,9 +553,15 @@ main {
     line-height: 1.5;
 }
 
-/* keep headline + intro line breaks tidy */
-.tagline, .subtagline, .question, .products-title, .products-lead, .product-lede {
+/* keep headline + short-line breaks tidy (even line lengths, no orphans) */
+.tagline, .subtagline, .question, .products-title, .products-lead, .product-lede,
+.form-note, .engine-note, .product-desc, .products-bench, .product-replaces {
     text-wrap: balance;
+}
+
+/* body paragraphs: prevent a lone word on the last line */
+.product-main p, .faq-a, .thanks {
+    text-wrap: pretty;
 }
 
 .palmetto {
