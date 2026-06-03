@@ -52,6 +52,7 @@ main {
     letter-spacing: -0.01em;
     color: #1a1a1a;
     line-height: 1;
+    text-decoration: none;
 }
 
 .tagline {
@@ -511,21 +512,6 @@ main {
 
 .nav-link:hover { color: #1a6fd0; }
 
-.nav-cta {
-    grid-column: 3;
-    justify-self: end;
-    font-size: 13px;
-    font-weight: 600;
-    color: #fff;
-    background: #1a6fd0;
-    text-decoration: none;
-    padding: 8px 16px;
-    border-radius: 8px;
-    white-space: nowrap;
-}
-
-.nav-cta:hover { background: #1559b3; }
-
 .footer-about {
     display: block;
     margin-bottom: 10px;
@@ -590,7 +576,6 @@ main {
     .brand .wordmark { font-size: 30px; }
     .brand .leaf { width: 92px; }
     .nav-link { font-size: 12px; }
-    .nav-cta { font-size: 12px; padding: 7px 13px; }
     .site-nav { gap: 14px; }
     main { flex: 0 1 auto; justify-content: flex-start; }
     .tagline { font-size: 14px; margin-bottom: 22px; }
