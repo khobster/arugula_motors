@@ -9,12 +9,12 @@ Founded and run by Kevin in Charleston, SC. He builds the software and stands be
 - [Beacon](https://www.arugulamotors.com/beacon/): Get found when customers ask AI tools (ChatGPT, Claude, Perplexity, Google's AI) for a recommendation. Covers GEO (getting mentioned inside AI answers) and AEO (getting cited in voice search and AI overviews), with monthly visibility tracking and a daily email that shows when an AI engine sends a visitor to your site. No guarantees, no contract, cancel anytime. Price: $1,500 setup plus $300 a month.
 - [White Bread](https://www.arugulamotors.com/white-bread/): A point of sale system for pizza, sandwich, and counter shops. You pay once and own it, including the source code, instead of renting Toast per terminal. Price: $22,000 for a single shop build.
 - [Mic](https://www.arugulamotors.com/mic/): Helps a local business run its own podcast and actually keep it going, episode after episode, to build a regular audience. Audio only, done with you or done for you. Pricing on request.
+- [Pigeon](https://www.arugulamotors.com/pigeon/): A newsletter that actually goes out. Pigeon is the engine that sends your newsletter every day on its own, with no expensive monthly platform and no vendor who owns your list. You own it. Done with you or done for you. We run one on Pigeon ourselves, the heist (https://heist.arugulamotors.com), a daily art newsletter that has gone out every morning. Pricing on request.
 - [Broom](https://www.arugulamotors.com/broom/): Cleaning and turnover software for short-term rental operators. You own it, instead of renting Turno, Properly, or Breezeway. Price: $12,000 for up to 25 properties.
 
 ## On the bench (built on request)
 
 - Diary: bookings and reservations
-- Pigeon: email newsletter
 - Tab: loyalty and punch cards
 - Plot: staff scheduling
 
