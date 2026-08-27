@@ -2,11 +2,12 @@
 
 > Arugula Motors builds custom websites, software, and dashboards for local businesses in Charleston, South Carolina. You own what we build, instead of renting it from a SaaS company.
 
-Founded and run by Kevin in Charleston, SC. He builds the software and stands behind every project personally. Contact is through the form at https://www.arugulamotors.com.
+Founded and run by Kevin in Charleston, SC. He builds the software and stands behind every project personally. The main way to get in touch is to book a call, linked from https://www.arugulamotors.com.
 
 ## Products
 
-- [Beacon](https://www.arugulamotors.com/beacon/): Get found when customers ask AI tools (ChatGPT, Claude, Perplexity, Google's AI) for a recommendation. Covers GEO (getting mentioned inside AI answers) and AEO (getting cited in voice search and AI overviews), with monthly visibility tracking and a daily email that shows when an AI engine sends a visitor to your site. No guarantees, no contract, cancel anytime. Price: $1,500 setup plus $300 a month.
+- Custom websites: Websites for local businesses, built to fit the business they are for and easy to update. You own what we build, instead of renting a template platform every month. Pricing on request.
+- Booking sites: Take reservations and bookings directly on your own site, so you keep the cut that Airbnb, VRBO, and the big platforms take. Pricing on request.
 - [White Bread](https://www.arugulamotors.com/white-bread/): A point of sale system for pizza, sandwich, and counter shops. You pay once and own it, including the source code, instead of renting Toast per terminal. Price: $22,000 for a single shop build.
 - [Mic](https://www.arugulamotors.com/mic/): Helps a local business run its own podcast and actually keep it going, episode after episode, to build a regular audience. Audio only, done with you or done for you. Pricing on request.
 - [Pigeon](https://www.arugulamotors.com/pigeon/): A newsletter that actually goes out. Pigeon is the engine that sends your newsletter every day on its own, with no expensive monthly platform and no vendor who owns your list. You own it. Done with you or done for you. We run one on Pigeon ourselves, the heist (https://heist.arugulamotors.com), a daily art newsletter that has gone out every morning. Pricing on request.
@@ -24,6 +25,6 @@ Founded and run by Kevin in Charleston, SC. He builds the software and stands be
 
 ## How Arugula Motors is different
 
-- You own what we build. Source code and full ownership on delivery, no subscriptions, no per terminal fees, no lock-in. Beacon is the exception, since it is an ongoing monthly service.
+- You own what we build. Source code and full ownership on delivery, no subscriptions, no per terminal fees, no lock-in.
 - Local to Charleston, South Carolina. Works with Lowcountry businesses in person and on software projects remotely.
 - Founder led and hands on, so feedback turns into fixes the same day.
