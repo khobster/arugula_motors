@@ -19,8 +19,17 @@ Founded and run by Kevin in Charleston, SC. He builds the software and stands be
 - Tab: loyalty and punch cards
 - Plot: staff scheduling
 
+## Pricing
+
+Fixed prices, quoted up front, at https://www.arugulamotors.com/pricing/.
+
+- Site tune-up: from $1,500. Speed and mobile fixes, working forms, SSL, and a copy cleanup on your current site.
+- Full rebuild: from $4,000, scaling with the number of pages. A brand new custom site, built to fit your business and yours to own.
+- Care plan: $150 a month. Ongoing updates, small changes, and hosting. Cancel anytime.
+
 ## More
 
+- [Work](https://www.arugulamotors.com/work/): A few things we have built, in production. Includes four country websites rebuilt in-house for a $500M advisory firm, ordering and kitchen apps for a food business, and a direct-booking rental site with no platform fees.
 - [About](https://www.arugulamotors.com/about/): Who is behind Arugula Motors, and answers to common questions.
 
 ## How Arugula Motors is different

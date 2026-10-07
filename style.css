@@ -499,7 +499,9 @@ main {
 .site-nav {
     grid-column: 2;
     display: flex;
-    gap: 22px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 20px;
 }
 
 .nav-link {
@@ -777,5 +779,181 @@ body.product-page .thanks {
     .emoji-hero { font-size: 80px; margin-bottom: 24px; }
     body.product-page main h2 { margin-top: 32px; }
     .product-lede { font-size: 18px; margin-bottom: 32px; }
+}
+
+/* ============================================================ */
+/* Work page                                                    */
+/* ============================================================ */
+
+.work-list {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+    margin: 8px 0 8px;
+}
+
+.work-item {
+    display: block;
+}
+
+/* Screenshot slot. Swap the <div class="work-shot"> for an
+   <img class="work-shot"> when a real screenshot exists. */
+.work-shot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    background: #f4f6f7;
+    border: 1px solid #e4e4e4;
+    border-radius: 12px;
+    color: #9aa6a6;
+    font-size: 13px;
+    letter-spacing: 0.01em;
+    margin: 0 0 16px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+img.work-shot {
+    display: block;
+    height: auto;
+}
+
+.work-title {
+    font-size: 20px !important;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    margin: 0 0 8px !important;
+    color: #1a1a1a;
+}
+
+.work-desc {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    color: #4a5a5a !important;
+    margin: 0 0 8px !important;
+}
+
+.work-outcome {
+    font-size: 15px !important;
+    font-weight: 600;
+    color: #1a6fd0 !important;
+    margin: 0 !important;
+    line-height: 1.45 !important;
+}
+
+.work-cta {
+    margin: 48px 0 0;
+    text-align: center;
+}
+
+.work-cta .form-note {
+    margin-top: 12px;
+    text-align: center;
+}
+
+/* ============================================================ */
+/* Pricing page                                                 */
+/* ============================================================ */
+
+.price-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin: 8px 0 0;
+}
+
+.price-card {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 22px;
+    border: 1px solid #e4e4e4;
+    border-radius: 14px;
+    background: #fff;
+}
+
+.price-card-feature {
+    border-color: #1a6fd0;
+    box-shadow: 0 0 0 1px #1a6fd0;
+}
+
+.price-name {
+    font-size: 16px !important;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 10px !important;
+    line-height: 1.2 !important;
+}
+
+.price-amount {
+    font-size: 28px !important;
+    font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: -0.02em;
+    margin: 0 !important;
+    line-height: 1.1 !important;
+}
+
+.price-per {
+    font-size: 15px;
+    font-weight: 600;
+    color: #7a8888;
+}
+
+.price-sub {
+    font-size: 13px !important;
+    color: #7a8888 !important;
+    font-style: italic;
+    margin: 4px 0 0 !important;
+    line-height: 1.35 !important;
+}
+
+.price-line {
+    font-size: 15px !important;
+    color: #4a5a5a !important;
+    margin: 14px 0 14px !important;
+    line-height: 1.45 !important;
+}
+
+.price-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.price-features li {
+    position: relative;
+    padding-left: 22px;
+    font-size: 14px;
+    color: #1a1a1a;
+    line-height: 1.4;
+}
+
+.price-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #1a6fd0;
+    font-weight: 700;
+}
+
+.price-note {
+    margin: 28px 0 0 !important;
+    font-size: 15px !important;
+    color: #5a6868 !important;
+    text-align: center;
+    line-height: 1.55 !important;
+}
+
+@media (max-width: 600px) {
+    .price-list { grid-template-columns: 1fr; }
+    .work-list { gap: 36px; }
+    .work-title { font-size: 19px !important; }
 }
 
