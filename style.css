@@ -40,7 +40,7 @@ main {
 }
 
 .brand .leaf {
-    width: 112px;
+    width: 72px;
     height: auto;
     display: block;
     flex-shrink: 0;
@@ -576,7 +576,7 @@ main {
 @media (max-width: 480px) {
     .brand { margin-bottom: 12px; gap: 12px; }
     .brand .wordmark { font-size: 30px; }
-    .brand .leaf { width: 92px; }
+    .brand .leaf { width: 60px; }
     .nav-link { font-size: 12px; }
     .site-nav { gap: 14px; }
     main { flex: 0 1 auto; justify-content: flex-start; }
