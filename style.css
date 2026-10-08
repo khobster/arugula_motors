@@ -798,26 +798,77 @@ body.product-page .thanks {
 
 /* Screenshot slot. Swap the <div class="work-shot"> for an
    <img class="work-shot"> when a real screenshot exists. */
+/* Screenshot frame that scrolls the full page on hover. */
 .work-shot {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
     width: 100%;
-    aspect-ratio: 16 / 10;
+    height: 240px;
     background: #f4f6f7;
     border: 1px solid #e4e4e4;
     border-radius: 12px;
-    color: #9aa6a6;
-    font-size: 13px;
-    letter-spacing: 0.01em;
     margin: 0 0 16px;
     overflow: hidden;
-    object-fit: cover;
+    cursor: pointer;
 }
 
-img.work-shot {
+.work-shot img {
     display: block;
+    width: 100%;
     height: auto;
+    transition: transform 8s ease-in-out;
+}
+
+.work-shot:hover img {
+    transform: translateY(calc(-100% + 240px));
+}
+
+.work-shot::after {
+    content: "\2195  hover to scroll";
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    font-size: 11px;
+    letter-spacing: 0.02em;
+    color: #fff;
+    background: rgba(26, 26, 26, 0.6);
+    padding: 3px 9px;
+    border-radius: 999px;
+    pointer-events: none;
+    transition: opacity 0.25s;
+}
+
+.work-shot:hover::after { opacity: 0; }
+
+/* Confidential-client panel (no screenshot): keeps every work item symmetric. */
+.work-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    cursor: default;
+    background: #eef1f3;
+}
+
+.work-panel::after { content: none; }
+
+.panel-glyphs {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.panel-glyph {
+    width: 54px;
+    height: auto;
+    display: block;
+}
+
+.panel-tag {
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #8a98a8;
 }
 
 .work-title {
