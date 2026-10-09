@@ -37,6 +37,7 @@ main {
     align-items: center;
     gap: 10px;
     margin: 0 auto 14px;
+    position: relative;
 }
 
 .brand .leaf {
@@ -44,6 +45,18 @@ main {
     height: auto;
     display: block;
     flex-shrink: 0;
+}
+
+.brand .crest {
+    width: 108px;
+    height: auto;
+    display: block;
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+@media (max-width: 480px) {
+    .brand .crest { width: 86px; }
 }
 
 .brand .wordmark {
@@ -59,7 +72,7 @@ main {
     font-size: 15px;
     color: #4a5a5a;
     margin: 0 auto 18px;
-    max-width: 460px;
+    max-width: none;
     line-height: 1.45;
 }
 
@@ -89,7 +102,7 @@ main {
 
 .animation-track {
     height: 34px;
-    margin: 6px 0 14px;
+    margin: 64px 0 0;
     position: relative;
     overflow: hidden;
     pointer-events: none;
@@ -175,7 +188,14 @@ main {
     width: 32px;
     height: 32px;
     transform: scaleX(-1);
-    animation: cross 2.5s linear infinite;
+    animation: car-cross 8s linear infinite;
+}
+
+/* Car drives across, then waits off-screen a while, then drives again. */
+@keyframes car-cross {
+    0% { left: -50px; }
+    30% { left: calc(100% + 10px); }
+    100% { left: calc(100% + 10px); }
 }
 
 .creature.car::before {
@@ -298,7 +318,7 @@ main {
 .products {
     width: 100%;
     max-width: 880px;
-    margin: 64px auto 0;
+    margin: 44px auto 0;
     padding-top: 40px;
     border-top: 1px solid #e4e4e4;
 }
@@ -501,6 +521,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 10px 20px;
 }
 
@@ -519,8 +540,12 @@ main {
     margin-bottom: 10px;
 }
 
+.cta {
+    margin-top: 30px;
+}
+
 .form-note {
-    margin: 4px 0 0;
+    margin: 8px 0 0;
     font-size: 13px;
     color: #7a8888;
     line-height: 1.4;
@@ -869,6 +894,72 @@ body.product-page .thanks {
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: #8a98a8;
+}
+
+/* Dancing hula figurine in the nav, just left of the links. */
+/* (hula figurine removed from the homepage) */
+
+/* Recent work strip on the homepage */
+.recent {
+    width: 100%;
+    max-width: 880px;
+    margin: 14px auto 0;
+    padding-top: 40px;
+    border-top: 1px solid #e4e4e4;
+    position: relative;
+}
+
+.recent-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 24px auto 0;
+}
+
+.recent-item {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.recent-item .work-shot {
+    box-shadow: 0 1px 4px rgba(26, 26, 26, 0.08);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.recent-item:hover .work-shot {
+    box-shadow: 0 10px 28px rgba(26, 26, 26, 0.14);
+    transform: translateY(-4px);
+}
+
+.recent-item:hover .recent-cap {
+    color: #1a6fd0;
+}
+
+.recent-cap {
+    display: block;
+    margin-top: 8px;
+    font-size: 14px;
+    color: #4a5a5a;
+    text-align: center;
+}
+
+.recent-more {
+    text-align: center;
+    margin-top: 22px;
+}
+
+.recent-more a {
+    color: #1a6fd0;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.recent-more a:hover { text-decoration: underline; }
+
+@media (max-width: 600px) {
+    .recent-grid { grid-template-columns: 1fr; }
 }
 
 .work-title {

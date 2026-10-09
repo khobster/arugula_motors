@@ -146,38 +146,60 @@
     <main>
         <div class="brand">
             <a href="./" class="wordmark">arugula motors</a>
-            <img class="leaf" src="palmetto.svg" alt="Arugula Motors palmetto mark" width="136" height="144">
+            <img class="crest" src="crest.jpg" alt="Arugula Motors crest" width="200" height="207">
         </div>
 
-        <p class="tagline">We build custom websites, and the tools inside them, for local businesses.</p>
-
-        <div class="animation-track" aria-hidden="true">
-            <div class="creature pacman" id="creature"></div>
-        </div>
+        <p class="tagline">We build custom sites and tools for local businesses.</p>
 
         <div class="cta">
             <!-- Books straight onto the arugulamotors@gmail.com calendar. -->
             <a class="play-link" href="https://calendar.app.google/Pw97EvaaQ7uS4h476">Book a call</a>
             <p class="form-note">A short call to talk through what you need built. No cost, no pressure.</p>
         </div>
+
+        <div class="animation-track" aria-hidden="true">
+            <div class="creature car"></div>
+        </div>
     </main>
+
+    <section class="recent" aria-label="Recent work">
+        <h2 class="products-title">recent work</h2>
+        <div class="recent-grid">
+            <a href="./work/" class="recent-item">
+                <div class="work-shot"><img src="work/shots/ofsts-full.png" alt="A website Arugula Motors built for a service-dog nonprofit" loading="lazy"></div>
+                <span class="recent-cap">A service-dog nonprofit</span>
+            </a>
+            <a href="./work/" class="recent-item">
+                <div class="work-shot"><img src="work/shots/coastal-calm-full.png" alt="A direct-booking rental site built by Arugula Motors" loading="lazy"></div>
+                <span class="recent-cap">A direct-booking rental site</span>
+            </a>
+            <a href="./work/" class="recent-item">
+                <div class="work-shot"><img src="work/shots/caros-full.png" alt="An ordering app Arugula Motors built for a food business" loading="lazy"></div>
+                <span class="recent-cap">An ordering and kitchen app</span>
+            </a>
+        </div>
+        <p class="recent-more"><a href="./work/">See all work →</a></p>
+    </section>
 
     <section class="products" aria-label="What we build">
         <h2 class="products-title">what we build</h2>
         <p class="products-lead">Websites that do real work, and the little engines that live inside them. Built to fit your business, and yours to keep.</p>
         <ul class="product-list">
             <li class="product">
+                <span class="product-emoji" aria-hidden="true">🖥️</span>
                 <span class="product-name">Websites</span>
                 <span class="product-replaces">the front door</span>
                 <span class="product-desc">Fast, modern sites that fit your business and are easy to update. Built to own, not rented from a template company.</span>
             </li>
             <li class="product">
+                <span class="product-emoji" aria-hidden="true">📆</span>
                 <span class="product-name">Booking sites</span>
                 <span class="product-replaces">skip the platform fees</span>
                 <span class="product-desc">Take reservations and bookings directly on your own site, so you keep the cut that Airbnb, VRBO, and the big platforms take.</span>
             </li>
             <li class="product product-linked">
                 <a href="./white-bread/" class="product-link">
+                    <span class="product-emoji" aria-hidden="true">🍞</span>
                     <span class="product-name">White Bread</span>
                     <span class="product-replaces">point of sale you own</span>
                     <span class="product-desc">A register for pizza, sandwich, and counter shops. Pay once and own it, instead of renting Toast every month.</span>
@@ -185,6 +207,7 @@
             </li>
             <li class="product product-linked">
                 <a href="./mic/" class="product-link">
+                    <span class="product-emoji" aria-hidden="true">🎙️</span>
                     <span class="product-name">Mic</span>
                     <span class="product-replaces">your own podcast</span>
                     <span class="product-desc">Run a podcast for your business and actually keep putting out episodes. Record a voice note, we handle the rest.</span>
@@ -192,12 +215,14 @@
             </li>
             <li class="product product-linked">
                 <a href="./pigeon/" class="product-link">
+                    <span class="product-emoji" aria-hidden="true">✉️</span>
                     <span class="product-name">Pigeon</span>
                     <span class="product-replaces">your own newsletter</span>
                     <span class="product-desc">A newsletter that goes out on its own, every day, with no monthly platform and no vendor who owns your list.</span>
                 </a>
             </li>
             <li class="product">
+                <span class="product-emoji" aria-hidden="true">📊</span>
                 <span class="product-name">Tools and dashboards</span>
                 <span class="product-replaces">the work behind the scenes</span>
                 <span class="product-desc">Order forms, schedulers, and dashboards. The little engines that do the busywork so you do not have to.</span>
@@ -210,32 +235,5 @@
         <img class="palmetto" src="palmetto.svg" alt="" width="17" height="18" aria-hidden="true">Locally built in Charleston, South Carolina.<br>
         <a class="footer-link" href="tel:+18438494443">(843) 849-4443</a>
     </footer>
-
-    <script>
-      // Cycle the little crosser: pacman -> runner -> car, one full trip each.
-      // All three share the CSS animation named 'cross', so swapping the class
-      // alone will not restart it (the elapsed time carries over and the
-      // faster creatures flip out). So on each swap we hard-restart the
-      // animation and schedule the next swap by that creature's own duration.
-      (function () {
-        var el = document.getElementById('creature');
-        if (!el) return;
-        var types = [
-          { cls: 'pacman', dur: 4000 },
-          { cls: 'car', dur: 2500 }
-        ];
-        var i = 0;
-        function step() {
-          el.classList.remove(types[i].cls);
-          i = (i + 1) % types.length;
-          el.classList.add(types[i].cls);
-          el.style.animation = 'none';   // kill it
-          void el.offsetWidth;           // force reflow so the restart takes
-          el.style.animation = '';       // hand it back to the CSS class, from 0
-          setTimeout(step, types[i].dur);
-        }
-        setTimeout(step, types[0].dur);
-      })();
-    </script>
 </body>
 </html>
