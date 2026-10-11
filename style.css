@@ -376,6 +376,14 @@ main {
     user-select: none;
 }
 
+.product-mark-img {
+    width: auto;
+    height: 44px;
+    display: block;
+    margin-bottom: 6px;
+    user-select: none;
+}
+
 .product-linked {
     border-color: #d4dde8;
 }
