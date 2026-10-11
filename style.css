@@ -379,6 +379,7 @@ main {
 .product-mark-img {
     width: auto;
     height: 44px;
+    align-self: flex-start;
     display: block;
     margin-bottom: 6px;
     user-select: none;
