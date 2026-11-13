@@ -138,13 +138,13 @@ main {
    roll so the faces foreshorten like a real block, then flattens back to
    the crisp isometric logo on landing. */
 @keyframes cube-flip {
-    0%   { transform: perspective(2000px) translateY(0) rotateX(0deg) scale(1, 1); }
-    12%  { transform: perspective(2000px) translateY(2px) rotateX(0deg) scale(1.06, .92); }
-    30%  { transform: perspective(220px) translateY(-6px) rotateX(-150deg) scale(1, 1); }
-    55%  { transform: perspective(220px) translateY(-8px) rotateX(-300deg) scale(1, 1); }
-    80%  { transform: perspective(2000px) translateY(0) rotateX(-360deg) scale(1, 1); }
-    88%  { transform: perspective(2000px) translateY(0) rotateX(-360deg) scale(1.05, .94); }
-    100% { transform: perspective(2000px) translateY(0) rotateX(-360deg) scale(1, 1); }
+    0%   { transform: perspective(calc(var(--s) * 32)) translateY(0) rotateX(0deg) scale(1, 1); }
+    12%  { transform: perspective(calc(var(--s) * 32)) translateY(2px) rotateX(0deg) scale(1.06, .92); }
+    30%  { transform: perspective(calc(var(--s) * 3.55)) translateY(-6px) rotateX(-150deg) scale(1, 1); }
+    55%  { transform: perspective(calc(var(--s) * 3.55)) translateY(-8px) rotateX(-300deg) scale(1, 1); }
+    80%  { transform: perspective(calc(var(--s) * 32)) translateY(0) rotateX(-360deg) scale(1, 1); }
+    88%  { transform: perspective(calc(var(--s) * 32)) translateY(0) rotateX(-360deg) scale(1.05, .94); }
+    100% { transform: perspective(calc(var(--s) * 32)) translateY(0) rotateX(-360deg) scale(1, 1); }
 }
 
 /* Keyframes line up with cube-flip so the twist tracks the roll. */
@@ -768,6 +768,61 @@ main {
     .product-name { font-size: 16px; }
     .products-note { font-size: 12px; margin-top: 20px; }
     .footer { font-size: 12px; margin-top: 32px; }
+}
+
+/* Desktop: the homepage was sized for phones and sat in a 580px column on big
+   screens. From 1024px up it widens to fill the screen with bigger type. */
+@media (min-width: 1024px) {
+    body.home { padding: 40px 56px; }
+    .home .site-header { max-width: 1200px; margin-bottom: 0; padding-bottom: 20px; }
+    .home .site-nav { gap: 12px 36px; }
+    .home .nav-link { font-size: 17px; }
+
+    .home main { max-width: 1200px; min-height: 76vh; }
+    .home .brand { gap: 22px; margin-bottom: 26px; }
+    .home .brand .wordmark { font-size: clamp(64px, 5.4vw, 100px); letter-spacing: -0.02em; }
+    .home .brand .cube-logo {
+        --s: clamp(96px, 7vw, 132px);
+        width: calc(var(--s) * 1.9);
+        height: calc(var(--s) * 1.8);
+        filter: drop-shadow(2.5px 0 0 #111) drop-shadow(-2.5px 0 0 #111)
+                drop-shadow(0 2.5px 0 #111) drop-shadow(0 -2.5px 0 #111);
+    }
+    .home .tagline { font-size: clamp(22px, 1.7vw, 30px); }
+    .home .cta { margin-top: 40px; }
+    .home .play-link { font-size: 21px; padding: 18px 44px; line-height: 24px; }
+    .home .form-note { font-size: 16px; margin-top: 14px; }
+
+    .home .recent,
+    .home .products { max-width: 1200px; padding-top: 72px; }
+    .home .products { margin-top: 80px; }
+    .home .products-title { font-size: 44px; margin-bottom: 32px; }
+    .home .recent-grid { gap: 28px; margin-top: 36px; }
+    .home .recent-item .work-shot { height: 380px; }
+    .home .recent-cap { font-size: 18px; margin-top: 12px; }
+    .home .recent-more { margin-top: 32px; }
+    .home .recent-more a { font-size: 18px; }
+    .home .products-lead { font-size: 20px; max-width: 680px; margin-bottom: 40px; }
+
+    .home .product-list { max-width: 1200px; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .home .product,
+    .home .product-link { padding: 24px 24px 26px; }
+    .home .product-linked { padding: 0; }
+    .home .product-emoji { font-size: 40px; }
+    .home .product-mark-img { height: 52px; }
+    .home .product-name { font-size: 21px; }
+    .home .product-replaces { font-size: 15px; }
+    .home .product-desc { font-size: 16px; line-height: 1.5; }
+    .home .product-proof { font-size: 15px; }
+
+    .home .playground { max-width: 800px; margin-top: 72px; }
+    .home .playground-lead { font-size: 16px; }
+    .home .playground-links { font-size: 19px; }
+    .home .footer { font-size: 16px; margin-top: 72px; }
+}
+
+@media (min-width: 1280px) {
+    .home .product-list { grid-template-columns: repeat(4, 1fr); }
 }
 
 @media (prefers-reduced-motion: reduce) {
