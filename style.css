@@ -64,13 +64,14 @@ main {
     animation: cube-flip 1s cubic-bezier(.3, .7, .4, 1) 2s 1 both;
 }
 
+/* End over end: the top tips toward the viewer. */
 @keyframes cube-flip {
-    0%   { transform: translateY(0) rotate(0deg) scale(1, 1); }
-    12%  { transform: translateY(2px) rotate(0deg) scale(1.06, .92); }
-    55%  { transform: translateY(-8px) rotate(300deg) scale(1, 1); }
-    80%  { transform: translateY(0) rotate(360deg) scale(1, 1); }
-    88%  { transform: translateY(0) rotate(360deg) scale(1.05, .94); }
-    100% { transform: translateY(0) rotate(360deg) scale(1, 1); }
+    0%   { transform: perspective(600px) translateY(0) rotateX(0deg) scale(1, 1); }
+    12%  { transform: perspective(600px) translateY(2px) rotateX(0deg) scale(1.06, .92); }
+    55%  { transform: perspective(600px) translateY(-8px) rotateX(-300deg) scale(1, 1); }
+    80%  { transform: perspective(600px) translateY(0) rotateX(-360deg) scale(1, 1); }
+    88%  { transform: perspective(600px) translateY(0) rotateX(-360deg) scale(1.05, .94); }
+    100% { transform: perspective(600px) translateY(0) rotateX(-360deg) scale(1, 1); }
 }
 
 @media (prefers-reduced-motion: reduce) {
