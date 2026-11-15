@@ -826,20 +826,6 @@ main {
     .home .product-list { grid-template-columns: repeat(4, 1fr); }
 }
 
-/* The More page: its question form and a three card list. */
-@media (min-width: 1024px) {
-    .home .question { font-size: 40px; }
-    .home .form { max-width: 640px; margin-left: auto; margin-right: auto; }
-    .home .form input { font-size: 20px; padding: 18px 20px; }
-    .home .form button { font-size: 20px; padding: 16px 40px; }
-    .home .subtagline { font-size: 18px; max-width: 640px; }
-    .home .products-bench,
-    .home .products-note { font-size: 17px; max-width: 760px; }
-    .home .product-list:not(:has(> li:nth-child(4))) {
-        grid-template-columns: repeat(3, 1fr);
-        max-width: 960px;
-    }
-}
 
 
 @media (prefers-reduced-motion: reduce) {
